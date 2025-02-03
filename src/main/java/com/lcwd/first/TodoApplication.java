@@ -3,7 +3,7 @@ package com.lcwd.first;
 import com.lcwd.first.couple.Animal;
 import com.lcwd.first.couple.Person;
 import com.lcwd.first.couple.Samosa;
-import com.lcwd.first.scope.Pepsi;
+import com.lcwd.first.lifecycle.Student;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -17,13 +17,9 @@ public class TodoApplication {
 	public static void main(String[] args) {
 
 		ApplicationContext context = SpringApplication.run(TodoApplication.class, args);
-//		1st request
-		Pepsi pepsiBean1 = context.getBean(Pepsi.class);
-		System.out.println(pepsiBean1);
-//		2nd request
-		Pepsi pepsiBean2 = context.getBean(Pepsi.class);
-		System.out.println(pepsiBean2);
-		pepsiBean1.drink();
+		Student studentBean = context.getBean("student5", Student.class);
+		System.out.println(studentBean);
+
 
 	}
 
