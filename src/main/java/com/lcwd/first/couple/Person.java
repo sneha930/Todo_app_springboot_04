@@ -10,11 +10,25 @@ public class Person {
     Animal animal;
     Student student;
 
-//    Constructor based injection
+    public Animal getAnimal() {
+        return animal;
+    }
+
+//    using autowired on setter: animal
     @Autowired
-    public Person(Animal animal, Student student) {
-        System.out.println("Calling constructor autowiring");
+    public void setAnimal(Animal animal) {
+        System.out.println("Setting animal");
         this.animal = animal;
+    }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    //    using autowired on setter: student
+    @Autowired
+    public void setStudent(Student student) {
+        System.out.println("Setting student");
         this.student = student;
     }
 
