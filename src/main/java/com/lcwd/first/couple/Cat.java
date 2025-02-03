@@ -6,7 +6,6 @@ import org.springframework.stereotype.Component;
 
 //@Component("Cat")
 @Component
-@Qualifier("Cat")
 public class Cat implements Animal {
     @Override
     public void play() {
